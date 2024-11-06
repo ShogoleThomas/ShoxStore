@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2LZW14BEWK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-2LZW14BEWK"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
 
-  gtag('config', 'G-2LZW14BEWK');
-</script>
+	  gtag('config', 'G-2LZW14BEWK');
+	</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShoxStore - Your Ultimate Shopping Experience</title>
@@ -17,6 +17,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	 <!-- Add FontAwesome for star icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+	<script src="scriptrating.js"></script>
 </head>
 <body>
     <header>
@@ -26,14 +29,18 @@
             </div>
             <div class="search-container">
                 <input type="text" placeholder="Search for products..." />
-                <button type="submit">Search</button>
+				<script src="scriptsearch.js"></script>
+                <button type="submit" onclick="performSearch()">Search</button>
             </div>
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Shop</a></li>
                     <li><a href="#">Deals</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="Contact-Us.html">Contact Us</a></li>
+					<li><a href="About.html">About Us</a></li>
+					<li><a href="Contact-Us.html">FAQ</a></li>
+					<li><a href="disclaimer.html">Disclaimer</a></li>
                 </ul>
             </nav>
         </div>
@@ -150,7 +157,7 @@
             <div class="category-grid">
                 <div class="category-item">
 				<h2>Electronics</h2>
-				<img src="HeadSets.jpg" alt="Product Image">
+				<img src="https://amzn.eu/d/19AjXTW" alt="Product Image">
 				<h3>Product Name 4</h3>
 				<p>$69.99</p>
 				<button class="add-to-cart">Buy Now</button><br><br>
@@ -190,6 +197,7 @@
 				</div>
             </div>
         </section>
+		
     </main>
 
     <footer>
@@ -202,16 +210,17 @@
                 <h3>Customer Service</h3>
                 <ul>
                     <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#faq">Frequently Asked Questions</a></li>
                     <li><a href="#">Shipping Info</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Payment Options</h3>
+                <h3>Related Articles</h3>
                 <ul>
-                    <li>Credit/Debit Cards</li>
-                    <li>PayPal</li>
-                    <li>Stripe</li>
+                    <li><a href="/best-gaming-laptops">Best Gaming Laptops of 2024</a></li>
+                    <li><a href="/top-10-bluetooth-headphones">Top 10 Bluetooth Headphones</a></li>
+                    <li><a href="/how-to-choose-a-smartphone">How to Choose the Right Smartphone</a></li>
+					<li><a href="/best-kitchen-appliances">Best Kitchen Appliances You Need</a></li>
                 </ul>
             </div>
             <div class="footer-section">
