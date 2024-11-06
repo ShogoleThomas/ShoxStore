@@ -789,7 +789,7 @@ header nav ul li a:hover {
 }
 @media (max-width: 600px) {
   footer, header {
-    width: 180%; /* Increase the width on small devices */
+    width: 500%; /* Increase the width on small devices */
     margin-left: -10%; /* Adjust the margin to make sure it doesn't overflow */
     margin-right: -10%; /* Adjust the margin to make sure it doesn't overflow */
   }
