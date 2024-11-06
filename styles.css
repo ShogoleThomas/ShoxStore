@@ -793,4 +793,7 @@ header nav ul li a:hover {
     margin-left: -10%; /* Adjust the margin to make sure it doesn't overflow */
     margin-right: -10%; /* Adjust the margin to make sure it doesn't overflow */
   }
+  .container {
+      width: 100px; 
+  }
 }
