@@ -31,10 +31,16 @@
                 <h1>ShoxStore</h1>
             </div>
             <div class="search-container">
-                <input type="text" placeholder="Search for products..." />
-				<script src="scriptsearch.js"></script>
-                <button type="submit" onclick="performSearch()">Search</button>
+                <input type="text" id="search-bar" placeholder="Search for products..." />
+                <button id="search-button" onclick="performSearch()">Search</button>
             </div>
+		<div id="search-modal" style="display:none;">
+		    <div>
+		       <button id="close-button">Close</button>
+			<div id="search-results"></div>
+		      </div>
+		</div>
+	     <script src="scriptsearch.js"></script>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>                   
