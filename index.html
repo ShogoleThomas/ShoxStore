@@ -32,20 +32,24 @@
                 <h1>ShoxStore</h1>
             </div>
             <div class="search-container">
-		    <!--Google search Bar-->
-		    <!-- script async src="https://cse.google.com/cse.js?cx=e0d570987f8e54b2f" --><!-- /script -- >
-                    <-- <div class="gcse-search"></div> -->
-                <input type="text" placeholder="Search for products..." />
-		<script src="scriptsearch.js"></script>
-                <button type="submit" onclick="performSearch()">Search</button>
+                <input type="text" id="search-bar" placeholder="Search for products..." />
+                <button id="search-button" onclick="performSearch()">Search</button>
             </div>
+             <div id="search-modal" style="display:none;">
+	     <div>
+		<button id="close-button">Close</button>
+		<div id="search-results"></div>
+		</div>
+	     </div>
+	     <script src="scriptsearch.js"></script>
+		
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>                    
                     <li><a href="Contact-Us.html">Contact Us</a></li>
-					<li><a href="About.html">About Us</a></li>
-					<li><a href="Contact-Us.html">FAQ</a></li>
-					<li><a href="disclaimer.html">Disclaimer</a></li>
+		<li><a href="About.html">About Us</a></li>
+		<li><a href="Contact-Us.html">FAQ</a></li>
+		<li><a href="disclaimer.html">Disclaimer</a></li>
                 </ul>
             </nav>
         </div>
