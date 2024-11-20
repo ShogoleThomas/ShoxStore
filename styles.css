@@ -797,3 +797,83 @@ header nav ul li a:hover {
       width: 100px; 
   }
 }
+/* Comment section */
+/* Modal styling */
+#search-results {
+    padding: 20px;
+	max-width: 600px; /* Set a maximum width for the results box */
+    max-height: 400px; /* Limit the height for scrolling */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+    background-color: #f8f8f8; /* Light background for the result box */
+    border: 1px solid #ccc; /* Border to separate results from the background */
+    border-radius: 8px; /* Round the corners for a softer look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.search-result-item {
+    display: block; /* Make the links block elements */
+    margin: 10px 0; /* Add space between links */
+    color: #007bff; /* Default color for the links */
+    font-size: 18px; /* Increase the font size for better readability */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the text bold */
+}
+
+.search-result-item:hover {
+    color: #0056b3; /* Darker blue when hovered */
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Styling for the search modal */
+#search-modal {
+    display: none; /* Hidden by default, will show when search is performed */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 70%; /* Adjust the width as needed */
+    max-width: 600px; /* Optional: limit max width */
+    box-shadow: none; /* Remove the shadow */
+}
+
+/* Modal content box */
+#search-modal > div {
+    background-color: #fff; /* White background for the modal content */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Close button inside the modal */
+#close-button {
+    display: block;
+    margin: 20px auto 0 auto; /* Center button horizontally and add top margin */
+    background-color: #1e90ff; /* Optional: button background color */
+    color: white; /* Button text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Close button hover effect */
+#close-button:hover {
+    background-color: #00bfff;
+}
+#search-results p {
+    color: black; /* Change text color to black */
+    font-size: 16px; /* Adjust font size if needed */
+    font-weight: bold; /* Optional: makes the text stand out more */
+    text-align: center; /* Optional: Center align the message */
+}
+@media (max-width: 768px) {
+    #search-modal > div {
+        width: 90%; /* Make the modal content box take up more width on small screens */
+        max-width: 100%; /* Remove the max-width limit */
+        max-height: 400px; /* Decrease max-height on smaller screens */
+    }
+}
