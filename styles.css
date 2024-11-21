@@ -877,3 +877,42 @@ header nav ul li a:hover {
         max-height: 400px; /* Decrease max-height on smaller screens */
     }
 }
+/*Media Query Secion*/
+
+/* Mobile Responsive Styling */
+@media (max-width: 480px) {
+  nav ul li {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .cta-button {
+    font-size: 0.9em;
+    padding: 6px 12px;
+  }
+
+  footer .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer .footer-links a {
+    font-size: 14px;
+  }
+
+  footer .social-media a {
+    font-size: 14px;
+  }
+
+  .product-card {
+    padding: 12px;
+  }
+
+  .product-title {
+    font-size: 1.1em;
+  }
+
+  .product-price {
+    font-size: 1em;
+  }
+}
