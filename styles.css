@@ -883,7 +883,7 @@ header nav ul li a:hover {
 /*Media Query Secion*/
 
 /* Mobile Responsive Styling */
-@media (max-width: 480px) {
+@media (max-width: 1200px) {
   nav ul li {
     font-size: 16px;
     margin-bottom: 8px;
