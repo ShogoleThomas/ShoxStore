@@ -72,9 +72,11 @@ nav ul li a {
     position: absolute;
     background-color: #ffffff; /* Background for dropdown */
     min-width: 200px;
+    min-height: 150px; /* Adjust this value to make it taller */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Dropdown shadow */
     z-index: 1000;
-    padding: 0;
+    padding-bottom: 20px; 
+    padding-top: 20px; 
     list-style: none; /* Remove bullet points */
     border: 1px solid #ccc; /* Optional border for structure */
     border-radius: 4px;
