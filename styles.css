@@ -873,11 +873,21 @@ header nav ul li a:hover {
     font-weight: bold; /* Optional: makes the text stand out more */
     text-align: center; /* Optional: Center align the message */
 }
-@media (max-width: 768px) {
-    #search-modal > div {
-        width: 90%; /* Make the modal content box take up more width on small screens */
-        max-width: 100%; /* Remove the max-width limit */
-        max-height: 400px; /* Decrease max-height on smaller screens */
-    }
+@media (max-width: 480px) {
+  .cta-button {
+    font-size: 0.9em;
+    padding: 8px 12px;
+  }
+
+  .product-item, .category-item {
+    padding: 10px;
+  }
+
+  .product-price {
+    font-size: 0.9em;
+  }
+
+  footer .footer-links a {
+    font-size: 14px;
+  }
 }
-/*Media Query Secion*/
