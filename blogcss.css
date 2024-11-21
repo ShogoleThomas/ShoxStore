@@ -1,0 +1,190 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General page styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* Main content styles */
+main {
+    max-width: 960px; /* Reduced width for zoomed-out effect */
+    margin: 0 auto;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Blog title and introduction */
+h1 {
+    font-size: 2.2rem; /* Slightly smaller font size */
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p {
+    font-size: 1.1rem; /* Slightly smaller font size */
+    margin-bottom: 25px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Laptop list styles */
+#laptop-list {
+    margin-bottom: 25px;
+}
+
+.laptop-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    padding: 15px; /* Slightly less padding */
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.laptop-item h3 {
+    font-size: 1.6rem; /* Slightly smaller font size */
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.laptop-item img {
+    max-width: 80%; /* Reduce the image size to 80% of its container */
+    height: auto;   /* Maintain aspect ratio */
+    border-radius: 8px;
+    margin: 0 auto 15px; /* Center the image horizontally */
+    display: block; /* Ensure proper centering */
+}
+
+.laptop-item p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.laptop-item a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f39c12;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.laptop-item a:hover {
+    background-color: #e67e22;
+}
+
+/* Conclusion section */
+#conclusion h2 {
+    font-size: 1.8rem; /* Reduced font size */
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+#conclusion p {
+    font-size: 1.1rem; /* Slightly smaller font size */
+    color: #555;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #4682B4;
+    color: #fff;
+    margin-top: 30px;
+    border-radius: 8px;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .laptop-item {
+        flex-direction: column;
+    }
+
+    .laptop-item img {
+        width: 100%;
+    }
+
+    footer {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .laptop-item h3 {
+        font-size: 1.4rem;
+    }
+
+    .laptop-item p {
+        font-size: 1rem;
+    }
+}
