@@ -12,6 +12,8 @@ header {
     background-color: #4A90E2;
     color: white;
     padding: 20px 0;
+    width: 100%; /* Ensure header takes full width */
+    overflow: hidden; /* Prevent overflow of content */
 }
 
 .container {
@@ -21,6 +23,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    width: 100%; /* Ensure container spans full width */
 }
 
 .logo h1 {
