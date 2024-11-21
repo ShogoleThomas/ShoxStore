@@ -62,47 +62,44 @@ nav ul li a {
     font-weight: bold;
 }
 /*For blog styles*/
-#blog-list {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+/* Dropdown menu styling */
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 200px;
+    z-index: 1;
+    padding: 0;
 }
 
-#blog-list h2 {
-    font-family: Arial, sans-serif;
-    font-size: 2rem;
+.dropdown-content li {
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-content li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a {
     color: #2c3e50;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.blog-preview {
-    margin: 15px 0;
-    padding: 15px;
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.blog-preview:hover {
-    transform: scale(1.02);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.blog-preview h3 {
-    font-size: 1.5rem;
-    color: #0984e3;
-    margin-bottom: 10px;
-}
-
-.blog-preview p {
-    font-size: 1rem;
-    color: #555;
-}
-
-.blog-preview a {
+    padding: 10px 15px;
     text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Align the dropdown to the parent menu item */
+.dropdown-content {
+    left: 0;
+    top: 100%;
 }
 
 /*for blog styles*/
