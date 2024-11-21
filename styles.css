@@ -62,44 +62,47 @@ nav ul li a {
     font-weight: bold;
 }
 /*For blog styles*/
-/* Dropdown menu styling */
+/* Style for the dropdown menu */
+.dropdown {
+    position: relative; /* To position the dropdown menu relative to this item */
+}
+
 .dropdown-content {
     display: none; /* Hidden by default */
     position: absolute;
-    background-color: #f9f9f9;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    min-width: 200px;
-    z-index: 1;
+    background-color: #ffffff; /* Dropdown background */
+    min-width: 200px; /* Dropdown width */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Dropdown shadow */
+    z-index: 1000; /* Ensure dropdown appears above other elements */
+    border: 1px solid #ccc; /* Optional border for better visibility */
+    border-radius: 4px; /* Smooth corners */
     padding: 0;
+    list-style: none; /* Remove list bullet points */
 }
 
-.dropdown-content li {
-    border-bottom: 1px solid #ddd;
-}
-
-.dropdown-content li:last-child {
-    border-bottom: none;
-}
-
-.dropdown-content a {
-    color: #2c3e50;
-    padding: 10px 15px;
+/* Style each dropdown item */
+.dropdown-content li a {
+    color: #333; /* Link text color */
+    padding: 10px 15px; /* Padding for better click area */
     text-decoration: none;
+    display: block; /* Ensure the links take the full width */
+    font-size: 14px; /* Adjust text size */
 }
 
-.dropdown-content a:hover {
-    background-color: #ddd;
+.dropdown-content li a:hover {
+    background-color: #f0f0f0; /* Light background on hover */
+    color: #000; /* Text color on hover */
 }
 
-/* Show the dropdown on hover */
+/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
-    display: block;
+    display: block; /* Make the dropdown visible */
 }
 
-/* Align the dropdown to the parent menu item */
+/* Position the dropdown directly below the parent item */
 .dropdown-content {
     left: 0;
-    top: 100%;
+    top: 100%; /* Align directly below the "Blogs" link */
 }
 
 /*for blog styles*/
