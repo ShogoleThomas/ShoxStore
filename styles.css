@@ -64,46 +64,48 @@ nav ul li a {
 /*For blog styles*/
 /* Style for the dropdown menu */
 .dropdown {
-    position: relative; /* To position the dropdown menu relative to this item */
+    position: relative;
 }
 
 .dropdown-content {
     display: none; /* Hidden by default */
     position: absolute;
-    background-color: #ffffff; /* Dropdown background */
-    min-width: 200px; /* Dropdown width */
+    background-color: #ffffff; /* Background for dropdown */
+    min-width: 200px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Dropdown shadow */
-    z-index: 1000; /* Ensure dropdown appears above other elements */
-    border: 1px solid #ccc; /* Optional border for better visibility */
-    border-radius: 4px; /* Smooth corners */
+    z-index: 1000;
     padding: 0;
-    list-style: none; /* Remove list bullet points */
+    list-style: none; /* Remove bullet points */
+    border: 1px solid #ccc; /* Optional border for structure */
+    border-radius: 4px;
 }
 
 /* Style each dropdown item */
 .dropdown-content li a {
-    color: #333; /* Link text color */
-    padding: 10px 15px; /* Padding for better click area */
-    text-decoration: none;
-    display: block; /* Ensure the links take the full width */
+    color: #000; /* Simple black text */
+    padding: 10px 15px;
+    text-decoration: none; /* Remove underlines */
+    display: block;
     font-size: 14px; /* Adjust text size */
 }
 
+/* Optional hover effect for better usability */
 .dropdown-content li a:hover {
-    background-color: #f0f0f0; /* Light background on hover */
-    color: #000; /* Text color on hover */
+    background-color: #f9f9f9; /* Subtle hover background */
+    color: #000; /* No color change */
 }
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
-    display: block; /* Make the dropdown visible */
+    display: block;
 }
 
 /* Position the dropdown directly below the parent item */
 .dropdown-content {
     left: 0;
-    top: 100%; /* Align directly below the "Blogs" link */
+    top: 100%;
 }
+
 
 /*for blog styles*/
 
