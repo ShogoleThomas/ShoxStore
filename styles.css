@@ -878,7 +878,12 @@ header nav ul li a:hover {
     font-size: 0.9em;
     padding: 8px 12px;
   }
-
+  header{
+    width: 100%;
+  }
+  .container{
+    width: 100%;
+  }
   .product-item, .category-item {
     padding: 10px;
   }
