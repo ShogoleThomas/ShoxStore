@@ -70,6 +70,7 @@ nav ul li a {
 .dropdown-content {
     display: none; /* Hidden by default */
     position: absolute;
+    z-index: 999;
     background-color: #ffffff; /* Background for dropdown */
     min-width: 200px;
     min-height: 150px; /* Adjust this value to make it taller */
