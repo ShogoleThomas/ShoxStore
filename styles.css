@@ -63,37 +63,15 @@ nav ul li a {
 }
 /*For blog styles*/
 
- /* Basic Dropdown Styles */
-.dropdown {
-    position: relative;
-}
-
-.dropdown-content {
+/* Hide the dropdown links by default */
+ul .dropdown-content {
     display: none;
-    position: absolute;
-    list-style: none;
-    padding: 0;
-    background-color: white;
-    border: 1px solid #ccc;
-    min-width: 160px;
-    z-index: 1000; /* Ensures the dropdown appears on top */
 }
 
-.dropdown:hover .dropdown-content {
+/* Show the dropdown links when the parent is hovered */
+ul .dropdown:hover .dropdown-content {
     display: block;
 }
-
-.dropdown-content li a {
-    padding: 8px 12px;
-    color: black;
-    text-decoration: none;
-}
-
-/* Simple Hover Effect for Links */
-.dropdown-content li a:hover {
-    background-color: #f1f1f1;
-}
-
 
 /*for blog styles*/
 
