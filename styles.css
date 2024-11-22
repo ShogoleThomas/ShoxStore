@@ -937,6 +937,30 @@ header nav ul li a:hover {
     font-weight: bold; /* Optional: makes the text stand out more */
     text-align: center; /* Optional: Center align the message */
 }
+#cookie-banner {
+    position: fixed;
+    bottom: 0;
+    background-color: #222;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+#cookie-banner button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#cookie-banner a {
+    color: #4caf50;
+}
+
 @media (max-width: 480px) {
   .cta-button {
     font-size: 0.9em;
