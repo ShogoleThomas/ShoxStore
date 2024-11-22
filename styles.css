@@ -136,10 +136,10 @@ nav ul li a {
     font-size: 0.9rem; /* Adjust size as needed */
     color: #555; /* Neutral text color */
     margin-top: 10px;
+    margin-left: -10px; /* Moves the message slightly to the left */
     text-align: left; /* Align to match your page layout */
     font-style: italic; /* Optional for subtle emphasis */
 }
-
 .product-grid, .category-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
