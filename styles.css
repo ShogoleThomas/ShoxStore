@@ -7,7 +7,14 @@ body {
     margin: 0;
     padding: 0;
 }
-
+@media (max-width: 768px) {
+  body {
+    transform: scale(1.05); /* Slight zoom-in of 5% */
+    transform-origin: top left; /* Keeps scaling from the top-left corner */
+    overflow-x: hidden; /* Hide horizontal overflow */
+    width: 1024px; /* Force width to desktop size */
+  }
+}
 header {
     background-color: #4A90E2;
     color: white;
