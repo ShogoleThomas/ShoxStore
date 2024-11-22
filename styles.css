@@ -132,6 +132,13 @@ nav ul li a {
 .featured-products, .shop-by-category {
     padding: 40px 20px;
 }
+.affiliate-disclaimer {
+    font-size: 0.9rem; /* Adjust size as needed */
+    color: #555; /* Neutral text color */
+    margin-top: 10px;
+    text-align: left; /* Align to match your page layout */
+    font-style: italic; /* Optional for subtle emphasis */
+}
 
 .product-grid, .category-grid {
     display: grid;
