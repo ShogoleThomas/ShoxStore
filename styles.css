@@ -894,6 +894,7 @@ header nav ul li a:hover {
 
 /* General styles for mobile and small devices */
 /* General styles for mobile and small devices */
+
 /* General styles for small screens */
 @media (max-width: 768px) {
     body {
@@ -927,6 +928,11 @@ header nav ul li a:hover {
         margin: 0 auto;
     }
 	.featured-products{
+		
+        margin-top: 295px;
+        
+	}
+    .featured-products{
 		
         margin-top: 295px;
         
@@ -989,6 +995,11 @@ header nav ul li a:hover {
         max-width: 100%;
     }
 	.featured-products{
+		
+        margin-top: 295px;
+        
+	}
+    .featured-products{
 		
         margin-top: 295px;
         
