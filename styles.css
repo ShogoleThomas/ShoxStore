@@ -7,14 +7,6 @@ body {
     margin: 0;
     padding: 0;
 }
-@media (max-width: 768px) {
-  body {
-    transform: scale(1.05); /* Slight zoom-in of 5% */
-    transform-origin: top left; /* Keeps scaling from the top-left corner */
-    overflow-x: hidden; /* Hide horizontal overflow */
-    width: 1024px; /* Force width to desktop size */
-  }
-}
 header {
     background-color: #4A90E2;
     color: white;
@@ -961,26 +953,66 @@ header nav ul li a:hover {
     color: #4caf50;
 }
 
-@media (max-width: 480px) {
-  .cta-button {
-    font-size: 0.9em;
-    padding: 8px 12px;
-  }
-  header{
-    width: 100%;
-  }
-  .container{
-    width: 100%;
-  }
-  .product-item, .category-item {
-    padding: 10px;
-  }
+/* General styles for small screens */
+@media (max-width: 600px) {
+    body {
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+        margin: 0;
+        padding: 0;
+    }
 
-  .product-price {
-    font-size: 0.9em;
-  }
+    /* Header adjustments */
+    header {
+        padding: 10px;
+        text-align: center;
+    }
 
-  footer .footer-links a {
-    font-size: 14px;
-  }
+    .container {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center-align items */
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px; /* Add spacing between menu items */
+    }
+
+    nav ul li {
+        text-align: center;
+    }
+
+    /* Product cards */
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ensure cards are wider and responsive */
+        gap: 15px; /* Adjust spacing for better layout */
+    }
+
+    .product-card {
+        width: auto; /* Allow cards to adjust naturally to available space */
+        max-width: 90%; /* Ensure a maximum width */
+        margin: 0 auto; /* Center-align cards */
+    }
+
+    /* Footer adjustments */
+    .footer-info {
+        display: flex;
+        flex-direction: column; /* Stack footer sections vertically */
+        align-items: center; /* Center-align all content */
+        justify-content: center; /* Ensure vertical alignment */
+        padding: 10px;
+        text-align: center;
+        word-wrap: break-word; /* Break long words for better display */
+    }
+
+    .footer-section {
+        width: 100%; /* Ensure sections take full width */
+        margin: 5px 0;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding: 10px;
+        background-color: #ddd;
+        width: 100%;
+    }
 }
