@@ -997,23 +997,7 @@ header nav ul li a:hover {
         background-color: #f0f0f0;
         z-index: 10;
     }
-    /* Affiliate Disclaimer */
-    .affiliate-disclaimer {
-        font-size: 0.8rem; /* Adjust text size for smaller screens */
-        color: #555;
-        margin-top: 10px;
-        margin-left: 0;
-        text-align: center; /* Center the disclaimer on mobile */
-        font-style: italic;
-    }
 
-    .affiliate-disclaimer h2 {
-        font-size: 22px; /* Smaller heading */
-    }
-
-    .affiliate-disclaimer p {
-        font-size: 14px; /* Smaller text */
-    }
     /* Footer adjustments */
     .footer-info {
         flex-direction: column; /* Stack footer content vertically */
@@ -1070,20 +1054,7 @@ header nav ul li a:hover {
         background-color: #f0f0f0;
         z-index: 10;
     }
-    /* Affiliate Disclaimer */
-    .affiliate-disclaimer {
-        font-size: 0.7rem; /* Adjust text size for very small screens */
-        margin-top: 10px;
-        text-align: center;
-    }
 
-    .affiliate-disclaimer h2 {
-        font-size: 20px;
-    }
-
-    .affiliate-disclaimer p {
-        font-size: 12px;
-    }
     .footer-info {
         padding: 10px;
         flex-direction: column;
