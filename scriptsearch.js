@@ -57,3 +57,16 @@ document.getElementById("search-button").addEventListener("click", function() {
 
 // Optional: Hide the results when clicking the close button in the modal
 document.getElementById("close-button").addEventListener("click", closeModal);
+
+//Search overlay
+const searchBar = document.getElementById('search-bar');
+const overlay = document.querySelector('.overlay');
+
+// Add event listeners to toggle the overlay
+searchBar.addEventListener('focus', () => {
+    overlay.classList.add('active'); // Activate the overlay
+});
+
+searchBar.addEventListener('blur', () => {
+    overlay.classList.remove('active'); // Remove the overlay
+});
