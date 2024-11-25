@@ -954,15 +954,16 @@ header nav ul li a:hover {
 }
 
 /* General styles for mobile and small devices */
+/* General styles for mobile and small devices */
 @media (max-width: 768px) {
     body {
         font-size: 14px; /* Adjust font size for better readability */
     }
 
-    /* Header */
+    /* Header adjustments */
     header {
         padding: 15px;
-        position: relative; /* Ensure the header remains visible */
+        position: relative; /* Ensure the header stays visible */
         z-index: 100; /* Make sure the header stays on top */
     }
 
@@ -978,6 +979,7 @@ header nav ul li a:hover {
         text-align: center;
     }
 
+    /* Product Grid */
     .product-grid {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust card size */
         gap: 15px;
@@ -988,9 +990,9 @@ header nav ul li a:hover {
         margin: 0 auto;
     }
 
-    /* Sidebar adjustments */
+    /* Sidebar */
     .sidebar {
-        position: relative; /* Sidebar no longer absolute */
+        position: relative; /* Sidebar stays in place */
         width: 100%; /* Full width on mobile */
         top: 0;
         left: 0;
@@ -1000,6 +1002,7 @@ header nav ul li a:hover {
         z-index: 10;
     }
 
+    /* Footer adjustments */
     .footer-info {
         flex-direction: column; /* Stack footer content vertically */
         align-items: center;
@@ -1014,6 +1017,24 @@ header nav ul li a:hover {
     .footer-bottom {
         width: 100%; /* Ensure footer is full width */
         padding: 15px;
+    }
+
+    /* Affiliate Disclaimer */
+    .affiliate-disclaimer {
+        font-size: 0.8rem; /* Adjust text size for smaller screens */
+        color: #555;
+        margin-top: 10px;
+        margin-left: 0;
+        text-align: center; /* Center the disclaimer on mobile */
+        font-style: italic;
+    }
+
+    .affiliate-disclaimer h2 {
+        font-size: 22px; /* Smaller heading */
+    }
+
+    .affiliate-disclaimer p {
+        font-size: 14px; /* Smaller text */
     }
 }
 
@@ -1071,4 +1092,20 @@ header nav ul li a:hover {
     .footer-bottom {
         padding: 10px;
     }
+
+    /* Affiliate Disclaimer */
+    .affiliate-disclaimer {
+        font-size: 0.7rem; /* Adjust text size for very small screens */
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .affiliate-disclaimer h2 {
+        font-size: 20px;
+    }
+
+    .affiliate-disclaimer p {
+        font-size: 12px;
+    }
 }
+
