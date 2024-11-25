@@ -960,11 +960,9 @@ header nav ul li a:hover {
         font-size: 14px; /* Adjust font size for better readability */
     }
 
-    /* Header adjustments */
+    /* Header */
     header {
         padding: 15px;
-        position: relative; /* Ensure the header stays visible */
-        z-index: 100; /* Make sure the header stays on top */
     }
 
     .container {
@@ -979,7 +977,6 @@ header nav ul li a:hover {
         text-align: center;
     }
 
-    /* Product Grid */
     .product-grid {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust card size */
         gap: 15px;
@@ -990,9 +987,8 @@ header nav ul li a:hover {
         margin: 0 auto;
     }
 
-    /* Sidebar */
     .sidebar {
-        position: relative; /* Sidebar stays in place */
+        position: absolute;
         width: 100%; /* Full width on mobile */
         top: 0;
         left: 0;
@@ -1001,24 +997,6 @@ header nav ul li a:hover {
         background-color: #f0f0f0;
         z-index: 10;
     }
-
-    /* Footer adjustments */
-    .footer-info {
-        flex-direction: column; /* Stack footer content vertically */
-        align-items: center;
-        text-align: center;
-    }
-
-    .footer-section {
-        margin-bottom: 15px; /* Add space between sections */
-        width: 100%; /* Ensure footer sections take full width */
-    }
-
-    .footer-bottom {
-        width: 100%; /* Ensure footer is full width */
-        padding: 15px;
-    }
-
     /* Affiliate Disclaimer */
     .affiliate-disclaimer {
         font-size: 0.8rem; /* Adjust text size for smaller screens */
@@ -1036,6 +1014,22 @@ header nav ul li a:hover {
     .affiliate-disclaimer p {
         font-size: 14px; /* Smaller text */
     }
+    /* Footer adjustments */
+    .footer-info {
+        flex-direction: column; /* Stack footer content vertically */
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 15px; /* Add space between sections */
+        width: 100%; /* Ensure footer sections take full width */
+    }
+
+    .footer-bottom {
+        width: 100%; /* Ensure footer is full width */
+        padding: 15px;
+    }
 }
 
 /* For even smaller devices like phones */
@@ -1046,8 +1040,6 @@ header nav ul li a:hover {
 
     header {
         padding: 10px 0;
-        position: relative; /* Ensure header is not hidden */
-        z-index: 100; /* Keep the header above other content */
     }
 
     .container {
@@ -1069,7 +1061,7 @@ header nav ul li a:hover {
     }
 
     .sidebar {
-        position: relative; /* Ensure sidebar doesn't overlap the header */
+        position: absolute;
         width: 100%;
         top: 0;
         left: 0;
@@ -1078,21 +1070,6 @@ header nav ul li a:hover {
         background-color: #f0f0f0;
         z-index: 10;
     }
-
-    .footer-info {
-        padding: 10px;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-section {
-        margin-bottom: 10px; /* Add space between sections */
-    }
-
-    .footer-bottom {
-        padding: 10px;
-    }
-
     /* Affiliate Disclaimer */
     .affiliate-disclaimer {
         font-size: 0.7rem; /* Adjust text size for very small screens */
@@ -1107,5 +1084,17 @@ header nav ul li a:hover {
     .affiliate-disclaimer p {
         font-size: 12px;
     }
-}
+    .footer-info {
+        padding: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
 
+    .footer-section {
+        margin-bottom: 10px; /* Add space between sections */
+    }
+
+    .footer-bottom {
+        padding: 10px;
+    }
+}
