@@ -894,6 +894,7 @@ header nav ul li a:hover {
 
 /* General styles for mobile and small devices */
 /* General styles for mobile and small devices */
+/* General styles for small screens */
 @media (max-width: 768px) {
     body {
         font-size: 14px; /* Adjust font size for better readability */
@@ -925,11 +926,16 @@ header nav ul li a:hover {
         width: 100%; /* Ensure full width */
         margin: 0 auto;
     }
+	.featured-products{
+		
+        margin-top: 295px;
+        
+	}
 
     .sidebar {
         position: absolute;
         width: 100%; /* Full width on mobile */
-        top: 0;
+        top: 240px;
         left: 0;
         padding: 15px;
         height: auto;
@@ -982,11 +988,16 @@ header nav ul li a:hover {
     .product-card {
         max-width: 100%;
     }
+	.featured-products{
+		
+        margin-top: 295px;
+        
+	}
 
     .sidebar {
         position: absolute;
         width: 100%;
-        top: 0;
+        top: 240px;
         left: 0;
         padding: 10px;
         height: auto;
