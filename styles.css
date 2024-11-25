@@ -316,22 +316,6 @@ button.show-more:active {
   flex: 1 1 45%; /* 45% for each column (details + form) */
 }
 
-@media (max-width: 768px) {
-  .contact-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contact-container > div {
-    flex: 1 1 100%; /* Stack on smaller screens */
-    margin-bottom: 20px;
-  }
-
-  .contact-details,
-  .contact-form-container {
-    padding: 20px;
-  }
-}
 .about-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -400,20 +384,6 @@ section a:hover {
 
 .call-to-action p {
   font-size: 18px;
-}
-
-@media (max-width: 768px) {
-  .about-container {
-    padding: 20px;
-  }
-
-  section {
-    padding: 20px;
-  }
-
-  .call-to-action {
-    padding: 30px;
-  }
 }
 /* FAQ Section Styles */
 #faq {
@@ -527,27 +497,6 @@ section a:hover {
 .affiliate-disclaimer a:hover {
     color: #ff9900; /* Change color on hover */
     text-decoration: underline;
-}
-
-/* Mobile Responsive Styling */
-@media (max-width: 768px) {
-    .affiliate-disclaimer {
-        padding: 15px;
-        margin: 20px auto;
-    }
-    
-    .affiliate-disclaimer h2 {
-        font-size: 24px;
-    }
-
-    .affiliate-disclaimer h3 {
-        font-size: 18px;
-    }
-
-    .affiliate-disclaimer p,
-    .affiliate-disclaimer ul {
-        font-size: 14px;
-    }
 }
 /* Product Card Styling */
 /* styles.css */
@@ -845,16 +794,6 @@ header nav ul li a:hover {
     text-align: center;
     padding: 10px 0;
     background-color: #ddd;
-}
-@media (max-width: 600px) {
-  footer, header {
-    width: 500px; /* Increase the width on small devices */
-    margin-left: -10%; /* Adjust the margin to make sure it doesn't overflow */
-    margin-right: -10%; /* Adjust the margin to make sure it doesn't overflow */
-  }
-  .container {
-      width: 100px; 
-  }
 }
 /* Comment section */
 /* Modal styling */
