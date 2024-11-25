@@ -953,66 +953,122 @@ header nav ul li a:hover {
     color: #4caf50;
 }
 
-/* General styles for small screens */
-@media (max-width: 600px) {
+/* General styles for mobile and small devices */
+@media (max-width: 768px) {
     body {
-        overflow-x: hidden; /* Prevent horizontal scrolling */
-        margin: 0;
-        padding: 0;
+        font-size: 14px; /* Adjust font size for better readability */
     }
 
-    /* Header adjustments */
+    /* Header */
     header {
-        padding: 10px;
-        text-align: center;
+        padding: 15px;
+        position: relative; /* Ensure the header remains visible */
+        z-index: 100; /* Make sure the header stays on top */
     }
 
     .container {
         flex-direction: column; /* Stack content vertically */
         align-items: center; /* Center-align items */
+        padding: 10px;
     }
 
     nav ul {
-        flex-direction: column;
-        gap: 10px; /* Add spacing between menu items */
-    }
-
-    nav ul li {
+        flex-direction: column; /* Stack navigation items vertically */
+        gap: 10px;
         text-align: center;
     }
 
-    /* Product cards */
     .product-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ensure cards are wider and responsive */
-        gap: 15px; /* Adjust spacing for better layout */
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust card size */
+        gap: 15px;
     }
 
     .product-card {
-        width: auto; /* Allow cards to adjust naturally to available space */
-        max-width: 90%; /* Ensure a maximum width */
-        margin: 0 auto; /* Center-align cards */
+        width: 100%; /* Ensure full width */
+        margin: 0 auto;
     }
 
-    /* Footer adjustments */
+    /* Sidebar adjustments */
+    .sidebar {
+        position: relative; /* Sidebar no longer absolute */
+        width: 100%; /* Full width on mobile */
+        top: 0;
+        left: 0;
+        padding: 15px;
+        height: auto;
+        background-color: #f0f0f0;
+        z-index: 10;
+    }
+
     .footer-info {
-        display: flex;
-        flex-direction: column; /* Stack footer sections vertically */
-        align-items: center; /* Center-align all content */
-        justify-content: center; /* Ensure vertical alignment */
-        padding: 10px;
+        flex-direction: column; /* Stack footer content vertically */
+        align-items: center;
         text-align: center;
-        word-wrap: break-word; /* Break long words for better display */
     }
 
     .footer-section {
-        width: 100%; /* Ensure sections take full width */
-        margin: 5px 0;
+        margin-bottom: 15px; /* Add space between sections */
+        width: 100%; /* Ensure footer sections take full width */
     }
 
     .footer-bottom {
-        text-align: center;
-        padding: 10px;
-        background-color: #ddd;
+        width: 100%; /* Ensure footer is full width */
+        padding: 15px;
+    }
+}
+
+/* For even smaller devices like phones */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px; /* Slightly smaller font */
+    }
+
+    header {
+        padding: 10px 0;
+        position: relative; /* Ensure header is not hidden */
+        z-index: 100; /* Keep the header above other content */
+    }
+
+    .container {
+        padding: 5px;
+        width: 100%; /* Ensure full width on small devices */
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Cards even smaller */
+        gap: 10px;
+    }
+
+    .product-card {
+        max-width: 100%;
+    }
+
+    .sidebar {
+        position: relative; /* Ensure sidebar doesn't overlap the header */
         width: 100%;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        height: auto;
+        background-color: #f0f0f0;
+        z-index: 10;
+    }
+
+    .footer-info {
+        padding: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 10px; /* Add space between sections */
+    }
+
+    .footer-bottom {
+        padding: 10px;
     }
 }
