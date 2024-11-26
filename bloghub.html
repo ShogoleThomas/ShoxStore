@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Hub</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        header {
+            background-color: #007acc;
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 2rem auto;
+            gap: 2rem;
+            padding: 0 1rem;
+            flex-wrap: wrap;
+        }
+
+        .main-content {
+            flex: 3;
+        }
+
+        .main-content h2 {
+            color: #007acc;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .main-content img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .main-content p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .main-content .read-more-content {
+            display: none;
+            margin-top: 1rem;
+            color: #555;
+        }
+
+        .main-content .cta {
+            background-color: #ffa500;
+            color: white;
+            padding: 0.8rem 1.2rem;
+            display: inline-block;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .main-content .cta:hover {
+            background-color: #ff8c00;
+        }
+
+        .sidebar {
+            flex: 1;
+            background-color: #e6f7ff;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .sidebar h3 {
+            font-size: 1.5rem;
+            color: #007acc;
+            margin-bottom: 1rem;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #007acc;
+            font-weight: bold;
+        }
+
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+            color: #ff8c00;
+        }
+
+        footer {
+            background-color: #007acc;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+        }
+
+        footer .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        footer .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .main-content,
+            .sidebar {
+                flex: 1 1 100%;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header nav a {
+                margin: 0.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">ShoxStore</div>
+        <nav>
+            <a href="https://www.shoxstore.store">Home</a>
+            <a href="https://www.shoxstore.store/About.html">About</a>
+            <a href="https://www.shoxstore.store/Contact-Us.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Main Blog Content -->
+        <div class="main-content">
+            <h2>Advanced Snail Mucin 96% Power Repairing Essence, Snail Mucin 96% </h2>
+            <img src="https://m.media-amazon.com/images/I/515gDRHadoL._SX425_.jpg" alt="Make Money Image">
+            <p>
+                The COSRX Advanced Snail 96% Mucin Power Repairing Essence is a popular skincare product, known for its impressive hydrating and healing properties, particularly for those with dry, sensitive, or acne-prone skin.
+				It contains a high concentration of snail secretion filtrate (96.3%), a key ingredient that helps to soothe, repair, and deeply moisturize the skin. This essence is celebrated for its ability to promote collagen production,
+				reduce the appearance of fine lines, and lighten dark spots, making it a staple in many skincare routines, especially in K-beauty. 
+            </p>
+            <div class="read-more-content">
+                <p>
+                    Customer reviews highlight its effectiveness in healing inflammation and improving skin texture, with users noting that it provides a glass-like finish and helps with issues such as dryness and irritation.
+					Some users have also observed its calming effect, which can be beneficial for those using harsher products like retinoids. The essence is lightweight, absorbs quickly, and does not leave a greasy residue, making it ideal for both oily and dry skin types​.
+                </p>
+                <p>
+                    However, the slimy texture of the essence can be a downside for some. Although it's an essential part of the formulation, the tackiness may feel uncomfortable initially. But many users report that this sensation fades as the product absorbs into the skin.
+					Also, those with allergies to snails should avoid this product​.
+
+                </p>
+                <p>
+                    While its slimy texture might feel a bit tacky at first, it absorbs quickly and works wonders when layered with a moisturizer, enhancing its hydrating effects. Many users report smoother, more radiant skin after consistent use, making it a great addition to your skincare routine, especially for those using harsh ingredients like retinoids​.
+                </p>
+				<p>You can find it on Amazon at the following <a href="https://amzn.to/4hX1IhX">link</a></p>
+            </div>
+            <button class="cta" onclick="toggleReadMore(this)">Read More</button>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h3>Explore Other Blogs</h3>
+            <ul>
+                <li><a href="Skinproduct.html">CERAVE Hydrating Facial Cleanser</a></li>
+                <li><a href="workequipment.html">10 Best Home Workout Equipment Uder $100</a></li>
+                <li><a href="fitness_weight.html">Why you're not losing Weight</a></li>
+                <li><a href="blog.html">Best 10 Laptops to Buy in 2024</a></li>
+                <li><a href="bestwatches.html">Best selling watches on Amazon for men & women in 2024</a></li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="https://www.shoxstore.store/disclaimer.html">Disclaimer</a>
+            <a href="https://www.shoxstore.store/About.html">About-Us</a>
+            <a href="https://www.shoxstore.store/Contact-Us.html">FAQ</a>
+        </div>
+        <p>&copy; 2024 ShoxStore. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleReadMore(button) {
+            const content = button.previousElementSibling;
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+                button.textContent = "Show Less";
+            } else {
+                content.style.display = "none";
+                button.textContent = "Read More";
+            }
+        }
+    </script>
+</body>
+
+</html>
