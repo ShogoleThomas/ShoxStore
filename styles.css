@@ -1018,4 +1018,100 @@ header nav ul li a:hover {
         padding: 10px;
     }
 }
+/*Happy new year and Chrismas messages*/
+        .christmas-message {
+            font-size: 3em;
+            color: #ff0000; /* Red color */
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            padding-top: 100px;
+        }
 
+        .snowflakes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .snowflakes span {
+            position: absolute;
+            top: -10px;
+            background-color: white;
+            border-radius: 50%;
+            animation: fall 10s infinite linear;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(100vh); }
+        }
+
+.christmas-message {
+            font-size: 2em;
+            color: #ff0044;
+            padding-top: 100px;
+            margin-bottom: 50px;
+            font-weight: bold;
+        }
+
+        .balloon {
+            position: absolute;
+            bottom: -100px;
+            background-color: #ff0000;
+            border-radius: 50%;
+            width: 60px;
+            height: 80px;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        .balloon::before {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            width: 2px;
+            height: 50px;
+            background-color: #000;
+            transform: translateX(-50%);
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-300px) rotate(15deg);
+            }
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+        }
+
+        /* Add different colors and positions to the balloons */
+        .balloon:nth-child(1) {
+            left: 10%;
+            animation-duration: 7s;
+        }
+
+        .balloon:nth-child(2) {
+            left: 30%;
+            animation-duration: 8s;
+        }
+
+        .balloon:nth-child(3) {
+            left: 50%;
+            animation-duration: 6s;
+        }
+
+        .balloon:nth-child(4) {
+            left: 70%;
+            animation-duration: 9s;
+        }
+
+        .balloon:nth-child(5) {
+            left: 90%;
+            animation-duration: 10s;
+        }
