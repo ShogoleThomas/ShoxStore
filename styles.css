@@ -1050,16 +1050,42 @@ header nav ul li a:hover {
         }
 
 
-               .balloon {
-            position: absolute;
-            bottom: 5vh;
-            background-color: #ff0000;
-            border-radius: 50%;
-            width: 10vw;
-            height: 14vw;
-            animation: float 6s infinite ease-in-out;
-	    z-index: 10;
-        }
+           .balloon {
+    position: absolute;
+    bottom: 5vh;
+    background-color: #ff0000;
+    border-radius: 50%;
+    width: 10vw;
+    height: 14vw;
+    animation: float 6s infinite ease-in-out;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the text */
+    text-align: center;
+}
+
+.balloon-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 1vw;
+    color: white;
+    font-weight: bold;
+    transform: rotate(-15deg); /* Slight rotation for a playful effect */
+    pointer-events: none; /* Prevent text from interfering with user interactions */
+}
+
+/* Optional: Responsive adjustments */
+@media (max-width: 768px) {
+    .balloon {
+        width: 15vw;
+        height: 20vw;
+    }
+
+    .balloon-text {
+        font-size: 2vw;
+    }
+}
+
 
         .balloon::before {
             content: '';
