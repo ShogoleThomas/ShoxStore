@@ -1052,12 +1052,13 @@ header nav ul li a:hover {
 
                .balloon {
             position: absolute;
-            bottom: -100px;
+            bottom: 5vh;
             background-color: #ff0000;
             border-radius: 50%;
-            width: 60px;
-            height: 80px;
+            width: 10vw;
+            height: 14vw;
             animation: float 6s infinite ease-in-out;
+	    z-index: 10;
         }
 
         .balloon::before {
@@ -1082,39 +1083,6 @@ header nav ul li a:hover {
                 transform: translateY(0) rotate(0deg);
             }
         }
-
-       .balloon {
-    position: absolute;
-    bottom: 10vh; /* Ensure it's visible within the viewport */
-    background-color: #ff0000;
-    border-radius: 50%;
-    width: 10vw; /* Adjusted for smaller screens */
-    height: 14vw;
-    animation: float 6s infinite ease-in-out;
-}
-
-.balloon::before {
-    content: '';
-    position: absolute;
-    bottom: -10vh;
-    left: 50%;
-    width: 0.3vw; /* Scaled for mobile */
-    height: 10vh;
-    background-color: #000;
-    transform: translateX(-50%);
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(0) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-30vh) rotate(15deg);
-    }
-    100% {
-        transform: translateY(0) rotate(0deg);
-    }
-}
 
 /* Customize different balloons for variety */
 .balloon:nth-child(1) {
