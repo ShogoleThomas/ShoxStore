@@ -1082,7 +1082,12 @@ header nav ul li a:hover {
     }
 
     .balloon-text {
-        font-size: 2vw;
+     font-family: 'Arial', sans-serif;
+    font-size: 1vw;
+    color: white;
+    font-weight: bold;
+    transform: rotate(-15deg); /* Slight rotation for a playful effect */
+    pointer-events: none; /* Prevent text from interfering with user interactions */
     }
 }
 
