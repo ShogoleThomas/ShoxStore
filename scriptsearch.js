@@ -1,59 +1,64 @@
-// Search index data (you can modify this as needed for your actual content)
-const searchIndex = [
-    { title: "Laptops", url: "Electronics-Laptops.html", keywords: ["laptops", "electronics"] },
-    { title: "Mobile Phones", url: "Electronics-Smartphones.html", keywords: ["phones", "mobile", "electronics"] },
-	{ title: "Headphones", url: "Electronics-Headphones.html", keywords: ["phones", "mobile", "electronics"] },
-	{ title: "Cameras", url: "Electronics-Camera.html", keywords: ["phones", "mobile", "electronics"] },
-    { title: "Fiction Books", url: "Books-Fiction.html", keywords: ["fiction", "books", "reading"] },
-    { title: "Men's Fashion", url: "Fashion-Man.html", keywords: ["fashion", "men", "clothing"] },
-    { title: "Home Appliances", url: "Health-HomeAppliances.html", keywords: ["appliances", "home", "electronics"] }
-];
+document.addEventListener("DOMContentLoaded", function () {
+    const searchBar = document.getElementById("search-bar");
+    const searchButton = document.getElementById("search-button");
+    const dimmedBackground = document.getElementById("dimmed-background");
+    const productCards = document.querySelectorAll(".product-card");
+    const noResultsMessage = document.getElementById("no-results");
 
-// Function to search the index
-function search(query) {
-    return searchIndex.filter(item =>
-        item.title.toLowerCase().includes(query.toLowerCase()) ||
-        item.keywords.some(keyword => keyword.toLowerCase().includes(query.toLowerCase()))
-    );
-}
+    // Function to perform search
+    function performSearch() {
+        const query = searchBar.value.toLowerCase();
+        let hasResults = false;
 
-// Function to display search results in the modal or results area
-function displayResults(query) {
-    const resultsContainer = document.getElementById("search-results");
-    const results = search(query);
+        productCards.forEach(card => {
+            const title = card.dataset.title ? card.dataset.title.toLowerCase() : "";
+            const description = card.dataset.description ? card.dataset.description.toLowerCase() : "";
 
-    // Clear previous results
-    resultsContainer.innerHTML = "";
-
-    if (results.length === 0) {
-        resultsContainer.innerHTML = "<p>No results found.</p>";
-    } else {
-        results.forEach(result => {
-            const resultElement = document.createElement("a");
-            resultElement.href = result.url;
-            resultElement.target = "_blank";
-            resultElement.textContent = result.title;
-            resultElement.classList.add("search-result-item"); // Adding custom class for styling
-            resultsContainer.appendChild(resultElement);
+            if (title.includes(query) || description.includes(query)) {
+                card.style.display = "block";
+                hasResults = true; // At least one match found
+            } else {
+                card.style.display = "none";
+            }
         });
+
+        // Show or hide the "No results found" message
+        if (!hasResults) {
+            noResultsMessage.classList.remove("hidden");
+            noResultsMessage.style.display = "block";
+        } else {
+            noResultsMessage.classList.add("hidden");
+            noResultsMessage.style.display = "none";
+        }
     }
 
-    // Show the results (you can use a modal, or display them in a dedicated section)
-    document.getElementById("search-modal").style.display = "block";
-}
+    // Show dimmed background when search bar is focused
+    searchBar.addEventListener("focus", function () {
+        dimmedBackground.classList.remove("hidden");
+        dimmedBackground.style.display = "block"; // Ensure it's visible
+    });
 
-// Function to hide the modal or results area
-function closeModal() {
-    document.getElementById("search-modal").style.display = "none";
-}
+    // Hide dimmed background when search bar loses focus
+    searchBar.addEventListener("blur", function () {
+        setTimeout(() => {
+            dimmedBackground.classList.add("hidden");
+            dimmedBackground.style.display = "none";
+        }, 200); // Slight delay to allow interactions with suggestions or "No results" message
+    });
 
-// Event listener for the search button (if you're using a button)
-document.getElementById("search-button").addEventListener("click", function() {
-    const query = document.getElementById("search-bar").value.trim();
-    if (query) {
-        displayResults(query);
-    }
+    // Trigger search on button click
+    searchButton.addEventListener("click", function () {
+        performSearch();
+        dimmedBackground.classList.add("hidden"); // Hide dimmed background after search
+        dimmedBackground.style.display = "none";
+    });
+
+    // Trigger search on pressing Enter
+    searchBar.addEventListener("keyup", function (event) {
+        if (event.key === "Enter") {
+            performSearch();
+            dimmedBackground.classList.add("hidden"); // Hide dimmed background after Enter key
+            dimmedBackground.style.display = "none";
+        }
+    });
 });
-
-// Optional: Hide the results when clicking the close button in the modal
-document.getElementById("close-button").addEventListener("click", closeModal);
