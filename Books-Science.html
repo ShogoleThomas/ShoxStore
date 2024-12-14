@@ -23,15 +23,11 @@
             </div>
             <div class="search-container">
                 <input type="text" id="search-bar" placeholder="Search for products..." />
+		<div id="suggestions" class="hidden"></div>
                 <button id="search-button" onclick="performSearch()">Search</button>
             </div>
-		<div id="search-modal" style="display:none;">
-		   <div>
-		      <button id="close-button">Close</button>
-		       <div id="search-results"></div>
-		   </div>
-		   </div>
-		    <script src="scriptsearch.js"></script>
+	     <div id="dimmed-background" class="dimmed hidden"></div>
+	     <script src="scriptsearch.js"></script>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>                   
@@ -554,6 +550,7 @@
 		     (adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
             </div>
+	     <div id="no-results" class="hidden">Oops! We couldn't find any products matching your search.</div>
         </section>
 
        <div id="cookie-banner" style="display: none; position: fixed; bottom: 0; background: #222; color: #fff; padding: 10px; width: 100%; text-align: center;">
