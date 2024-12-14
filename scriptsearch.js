@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const dimmedBackground = document.getElementById("dimmed-background");
     const productCards = document.querySelectorAll(".product-card");
     const noResultsMessage = document.getElementById("no-results");
+    const suggestionsContainer = document.getElementById("suggestions");
 
     // Function to perform search
     function performSearch() {
@@ -26,9 +27,59 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!hasResults) {
             noResultsMessage.classList.remove("hidden");
             noResultsMessage.style.display = "block";
+            noResultsMessage.scrollIntoView({ behavior: "auto" }); // Scroll to "No results found" message
         } else {
             noResultsMessage.classList.add("hidden");
             noResultsMessage.style.display = "none";
+
+            const firstResult = document.querySelector(".product-card:not([style*='display: none'])");
+            if (firstResult) {
+                firstResult.scrollIntoView({ behavior: "auto" }); // Scroll to the first visible product card
+            }
+        }
+
+        // Hide suggestions when the search is performed
+        suggestionsContainer.classList.add("hidden");
+        suggestionsContainer.style.display = "none";
+    }
+
+    // Function to update suggestions
+    function updateSuggestions() {
+        const query = searchBar.value.toLowerCase();
+        suggestionsContainer.innerHTML = ""; // Clear previous suggestions
+
+        if (query.trim() === "") {
+            suggestionsContainer.classList.add("hidden");
+            return;
+        }
+
+        let suggestions = [];
+
+        productCards.forEach(card => {
+            const title = card.dataset.title ? card.dataset.title.toLowerCase() : "";
+
+            if (title.includes(query) && !suggestions.includes(title)) {
+                suggestions.push(title);
+            }
+        });
+
+        if (suggestions.length === 0) {
+            suggestionsContainer.classList.add("hidden");
+        } else {
+            suggestions.forEach(suggestion => {
+                const suggestionElement = document.createElement("div");
+                suggestionElement.textContent = suggestion;
+                suggestionElement.classList.add("suggestion-item");
+                suggestionElement.addEventListener("click", function () {
+                    searchBar.value = suggestion;
+                    suggestionsContainer.classList.add("hidden");
+                    performSearch(); // Trigger search on click
+                });
+                suggestionsContainer.appendChild(suggestionElement);
+            });
+
+            suggestionsContainer.classList.remove("hidden");
+            suggestionsContainer.style.display = "block"; // Ensure suggestions are visible
         }
     }
 
@@ -43,22 +94,21 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(() => {
             dimmedBackground.classList.add("hidden");
             dimmedBackground.style.display = "none";
-        }, 200); // Slight delay to allow interactions with suggestions or "No results" message
+        }, 200); // Slight delay to allow interactions with suggestions
     });
 
     // Trigger search on button click
     searchButton.addEventListener("click", function () {
         performSearch();
-        dimmedBackground.classList.add("hidden"); // Hide dimmed background after search
-        dimmedBackground.style.display = "none";
     });
+
+    // Update suggestions on input
+    searchBar.addEventListener("input", updateSuggestions);
 
     // Trigger search on pressing Enter
     searchBar.addEventListener("keyup", function (event) {
         if (event.key === "Enter") {
             performSearch();
-            dimmedBackground.classList.add("hidden"); // Hide dimmed background after Enter key
-            dimmedBackground.style.display = "none";
         }
     });
 });
