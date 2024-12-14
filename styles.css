@@ -80,32 +80,40 @@ header {
 }
 /*No results message*/
 /*suggestions styling*/
+/* Suggestions container positioned below the search bar */
 #suggestions {
-    position: absolute;
+    position: absolute; /* Make it float relative to the search bar */
+    top: 100%; /* Align directly below the search bar */
+    left: 0;
+    width: 100%; /* Match the search bar width */
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 4px;
-    max-height: 200px;
+    max-height: 200px; /* Limit height to make it scrollable */
     overflow-y: auto;
-    z-index: 20; /* Above the dim background */
-    width: 300px; /* Match search bar width */
-    display: none;
+    z-index: 20; /* Ensure it appears above other elements */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    display: none; /* Hidden by default */
 }
 
+/* Show the suggestions container when it's active */
 #suggestions.hidden {
     display: none;
 }
 
+/* Individual suggestion items */
 #suggestions div {
     padding: 10px;
     cursor: pointer;
     font-size: 16px;
+    color: #333; /* Standard text color */
+    text-decoration: none; /* Remove underlines */
 }
 
 #suggestions div:hover {
-    background-color: #f1f1f1;
+    background-color: #f1f1f1; /* Light gray highlight */
+    color: #007bff; /* Optional: Add a blue hover color like links */
 }
-
 /*suugestons styling*/
 /*search dim last*/
 nav ul {
