@@ -46,7 +46,68 @@ header {
     border-radius: 0 4px 4px 0;
     cursor: pointer;
 }
+/*Search dim - New search Functionality*/
+.dimmed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
 
+.dimmed.hidden {
+    display: none;
+}
+
+.search-container {
+    position: relative;
+    z-index: 10; /* Ensure it stays above the dimmed background */
+}
+/*No results message*/
+#no-results {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #e74c3c; /* Red text */
+    margin-top: 20px;
+    display: none; /* Hidden by default */
+}
+
+#no-results.hidden {
+    display: none;
+}
+/*No results message*/
+/*suggestions styling*/
+#suggestions {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 20; /* Above the dim background */
+    width: 300px; /* Match search bar width */
+    display: none;
+}
+
+#suggestions.hidden {
+    display: none;
+}
+
+#suggestions div {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#suggestions div:hover {
+    background-color: #f1f1f1;
+}
+
+/*suugestons styling*/
+/*search dim last*/
 nav ul {
     list-style-type: none;
     padding: 0;
