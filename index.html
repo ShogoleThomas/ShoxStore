@@ -28,14 +28,10 @@
             </div>
             <div class="search-container">
                 <input type="text" id="search-bar" placeholder="Search for products..." />
+		<div id="suggestions" class="hidden"></div>
                 <button id="search-button" onclick="performSearch()">Search</button>
             </div>
-             <div id="search-modal" style="display:none;">
-	     <div>
-		<button id="close-button">Close</button>
-		<div id="search-results"></div>
-		</div>
-	     </div>
+             <div id="dimmed-background" class="dimmed hidden"></div>
 	     <script src="scriptsearch.js"></script>
 		
             <nav>
@@ -186,7 +182,7 @@
             <div class="product-grid">
 
                <!--Product Card 1-->
-                            <div class="product-card">
+                            <div class="product-card" data-title="Govee Christmas Lights 2" data-description="RGBWIC 99FT 300LEDs Christmas Tree Lights with Shape Mapping Function, Smart Holiday String Lights for Christmas Decor, 130+ Preset Scenes, Voice and APP Control, Green Wire">
 				<div class="product-images">
 				  <a href="https://amzn.to/4fkyZRz" target="_blank">
 					<img src="https://m.media-amazon.com/images/I/81pMYDUi9bL._AC_SX569_.jpg" alt="NUVADERMIS Silicone Forehead Wrinkle Patches" class="product-image">
@@ -731,6 +727,7 @@
 	     (adsbygoogle = window.adsbygoogle || []).push({});
 	</script>
             </div>
+	    <div id="no-results" class="hidden">No products found matching your search.</div>
         </section>
 
        <div id="cookie-banner" style="display: none; position: fixed; bottom: 0; background: #222; color: #fff; padding: 10px; width: 100%; text-align: center;">
